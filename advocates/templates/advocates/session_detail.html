@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-md-3"><strong>Client:</strong></div>
+		<div class="col-md-9">{{ object.clientname }}</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"><strong>Description:</strong></div>
+		<div class="col-md-9">{{ object.case_describe }}</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"><strong>Court:</strong></div>
+		<div class="col-md-9">{{ object.court }}</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"><strong>Track:</strong></div>
+		<div class="col-md-9">{{ object.track }}</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"><strong>Date:</strong></div>
+		<div class="col-md-9">{{ object.hearing_date }}</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"><strong>Status:</strong></div>
+		<div class="col-md-9">{{ object.status }}</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<a href="{% url 'sessions_list' %}">Return to list</a>
+		</div>
+	</div>
+{% endblock %}

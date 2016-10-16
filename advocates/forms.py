@@ -2,6 +2,7 @@ from django.forms import ModelForm
 from advocates.models import Session
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
+from crispy_forms.utils import render_crispy_form
 
 class SessionForm(ModelForm):
     class Meta:

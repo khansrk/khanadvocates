@@ -1,6 +1,5 @@
-from django.conf.urls import url
+from django.conf.urls import url,include
 from django.contrib import admin
-
 from advocates import views, auth
 
 urlpatterns = [
@@ -14,6 +13,6 @@ urlpatterns = [
     url(r'^sessions/(?P<pk>[0-9]+)/$', views.SessionDetail.as_view(), name = 'sessions_detail'),
     url(r'^sessions/create/$', views.SessionCreate.as_view(), name = 'sessions_create'),
     url(r'^sessions/update/(?P<pk>[0-9]+)/$', views.SessionUpdate.as_view(), name = 'sessions_update'),
-
-]
+    
+   ]
 

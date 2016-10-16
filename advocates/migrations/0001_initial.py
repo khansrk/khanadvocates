@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('clientname', models.CharField(max_length=100)),
-                ('mobile', models.IntegerField(max_length=50)),
+                ('mobile', models.IntegerField()),
                 ('case_describe', models.TextField(max_length=2000)),
                 ('status', models.CharField(max_length=1, choices=[(b'a', b'Approved'), (b's', b'Submitted'), (b'r', b'Rejected'), (b'p', b'Progress')])),
                 ('hearing_date', models.DateTimeField(null=True, blank=True)),

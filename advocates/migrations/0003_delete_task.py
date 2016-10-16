@@ -7,13 +7,11 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('advocates', '0001_initial'),
+        ('advocates', '0002_task'),
     ]
 
     operations = [
-        migrations.AlterField(
-            model_name='session',
-            name='mobile',
-            field=models.IntegerField(),
+        migrations.DeleteModel(
+            name='Task',
         ),
     ]

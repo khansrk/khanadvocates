@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'thsqpxkhg=gft3(e#8=yc457am6l##elc5+1_cxbv3#$96-zb&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -36,7 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'advocates',
     'crispy_forms',
-    
+    'psycopg2',
+    'dj_database_url',
 )
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
@@ -79,11 +80,11 @@ WSGI_APPLICATION = 'khanadvo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'khanadvo',
+        'NAME': 'khanadvocates',
         'USER':'postgres',
         'PASSWORD':'5694950',
-        'HOST':'',
-        'PORT':'',
+        'HOST':'localhost',
+        'PORT':'5432',
     }
 }
 

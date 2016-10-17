@@ -2,14 +2,12 @@ from django.contrib import admin
 from advocates.models import *
 
 # Register your models here.
+
 admin.site.register(Track)
-
 admin.site.register(Court)
-
 class SessionAdmin(admin.ModelAdmin):
     list_display = ('clientname', 'status', 'track','court','hearing_date',)
     search_fields = ['clientname', 'status']
-    list_filter = ('track__casetype',)
     actions = ['make_approved',]
 
     def make_approved(self, request, queryset):

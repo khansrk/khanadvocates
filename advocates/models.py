@@ -22,7 +22,7 @@ class Track(models.Model):
 
 class Session(models.Model):
     clientname = models.CharField(max_length = 100)
-    mobile = models.IntegerField()
+    mobile = models.CharField(max_length = 100)
     case_describe = models.TextField(max_length = 2000)
     track = models.CharField(max_length=200,null=True)
     court = models.CharField(max_length=200,null=True)

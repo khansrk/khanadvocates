@@ -5,16 +5,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Khan Advocates</title>
-    
+
 	<!-- Bootstrap -->
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
 	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
 	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-	
 </head>
 <body>
 	<nav class="navbar navbar-default" role="navigation">
@@ -27,7 +27,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#" >Khan Advocates</a>
+				<a class="navbar-brand" href="#">Khan Advocates</a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="nav-toggle">
@@ -35,7 +35,7 @@
 					<li><a href="{% url 'sessions_list' %}">Sessions</a></li>
 
 					{% if user.is_authenticated %}
-					<li><a href="{% url 'logout' %}">Logout</a></li>
+						<li><a href="{% url 'logout' %}">Logout</a></li>
 					{% else %}
 						<li><a href="{% url 'login' %}">Login</a></li>
 						<li><a href="{% url 'register' %}">Register</a></li>
@@ -43,7 +43,6 @@
 
 					{% if user.is_staff %}
 						<li><a href="/admin">Administration</a></li>
-						
 					{% endif %}
 				</ul>
 			</div>
@@ -52,7 +51,8 @@
 	<div class="container">
 		<div class="jumbotron">
 			<h1 align="center">Welcome to Khan Advocates</h1>
-			<p align="center">Please Contact Before Registration and then Submit</p>
+			<p align="center">Register To Submit Your Case</p>
+			<p align="center">We Will Get Back To You With Your ID And Password</p>
 		</div>
 		{% if warning %}
 			<div class="alert alert-warning alert-dismissable">
@@ -71,6 +71,7 @@
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<footer>
 	<h6 align="center">Developed by Shahrukh Khan</h6>
 	<hr><hr>
@@ -80,7 +81,6 @@
 	<h5 align="center">Contact us:9811391451</h5>
 	<hr>
 	<a href="http://www.djangoproject.com/"><img src="https://www.djangoproject.com/m/img/badges/djangopowered126x54.gif" border="0" alt="Powered by Django." title="Powered by Django." align="center"/></a>
-	<script src="http://maps.googleapis.com/maps/api/js"></script>
-    </footer>
-  </body>
+	</footer>
+</body>
 </html>

@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'thsqpxkhg=gft3(e#8=yc457am6l##elc5+1_cxbv3#$96-zb&'
+#SECRET_KEY = 'thsqpxkhg=gft3(e#8=yc457am6l##elc5+1_cxbv3#$96-zb&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'khanadvo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'khanadvocates',
-        'USER':'postgres',
-        'PASSWORD':'5694950',
-        'HOST':'localhost',
-        'PORT':'5432',
+#         'NAME': 'khanadvocates',
+#         'USER':'postgres',
+#         'PASSWORD':'5694950',
+#         'HOST':'localhost',
+#         'PORT':'5432',
     }
 }
 

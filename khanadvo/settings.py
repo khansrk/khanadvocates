@@ -82,11 +82,6 @@ WSGI_APPLICATION = 'khanadvo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'khanadvocates',
-#         'USER':'postgres',
-#         'PASSWORD':'5694950',
-#         'HOST':'localhost',
-#         'PORT':'5432',
     }
 }
 

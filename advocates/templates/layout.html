@@ -34,10 +34,14 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 		
-		function onButtonClick() {
-  // Add this to a button's onclick handler
-  FB.AppEvents.logEvent("sentFriendRequest");
-}
+FB.AppEvents.logEvent(
+  FB.AppEvents.EventNames.ACHIEVED_LEVEL,
+  FB.AppEvents.EventNames.SEARCHED,
+  FB.AppEvents.EventNames.COMPLETED_REGISTRATION,
+  FB.AppEvents.EventNames.RATED,
+  FB.AppEvents.EventNames.VIEWED_CONTENT,
+  FB.AppEvents.EventNames.ADDED_TO_CART,
+);
 </script>
 </head>
 <body>

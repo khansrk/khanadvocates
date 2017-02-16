@@ -33,6 +33,11 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+		
+		function onButtonClick() {
+  // Add this to a button's onclick handler
+  FB.AppEvents.logEvent("sentFriendRequest");
+}
 </script>
 </head>
 <body>

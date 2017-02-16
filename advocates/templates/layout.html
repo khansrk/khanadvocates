@@ -16,37 +16,6 @@
 	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 	
-	<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '219324788534951',
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-    FB.AppEvents.logPageView();
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-		
-		function onButtonClick() {
-  // Add this to a button's onclick handler
-  FB.AppEvents.logEvent("sentFriendRequest");
-}
-FB.AppEvents.logEvent(
-  FB.AppEvents.ACHIEVED_LEVEL,
-  FB.AppEvents.SEARCHED,
-  FB.AppEvents.COMPLETED_REGISTRATION,
-  FB.AppEvents.EventNamesRATED,
-  FB.AppEvents.VIEWED_CONTENT,
-  FB.AppEvents.ADDED_TO_CART,
-);
-</script>
 </head>
 <body>
 	<nav class="navbar navbar-default" role="navigation">

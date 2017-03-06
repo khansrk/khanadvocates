@@ -41,9 +41,13 @@ def register(request):
         username = request.POST["username"];
         password = request.POST["password"];
         email = request.POST["email"]
-        # call create_user from the ORM. Make sure you call save!
-        auth.models.User.objects.create_user(username, email, password).save();
-        #log the user in
-        user = auth.authenticate(username = username, password = password);
-        auth.login(request, user);
-        return render(request, "auth/registered.html");
+        if not username.exists():
+            # call create_user from the ORM. Make sure you call save!
+            auth.models.User.objects.create_user(username, email, password).save();
+            #log the user in
+            user = auth.authenticate(username = username, password = password);
+            auth.login(request, user);
+            return render(request, "auth/registered.html");
+        else:
+            return render(request, "auth/register.html", { "warning": "Username already exist" });
+
